@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> 
+    <title>SwasthyaX</title>
+    <link rel="stylesheet" href="/swasthyaX/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">SwasthyaX</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#diagnosis">Diagnosis</a></li>
+            <li><a href="#diseases">Available Diseases</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><button id="logout">Logout</button></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Welcome to Advanced Medical Diagnosis</h1>
+                <p>Your health, our priority. Predict diseases based on symptoms and get recommendations.</p>
+                <a href="#diagnosis" class="cta-button">Start Your Diagnosis</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="card">
+                    <p id="about-text">
+                        <p id="about-text">
+                            Welcome to <strong>SwasthyaX</strong>, where we are dedicated to empowering individuals to take charge of their health. At SwasthyaX, we leverage advanced machine learning algorithms to offer personalized health predictions based on reported symptoms. Our mission is to make healthcare more accessible and transparent by providing you with valuable insights that can help you understand your health better.
+                            <span id="dots">...</span>
+                            <span id="more" style="display:none;">
+                                We understand that your health is of utmost importance, which is why our platform is designed to offer an intuitive experience. With just a few inputs, you can receive predictions about potential health conditions and get tailored health recommendations that can guide your next steps. Whether you're looking for advice on symptom management, preventive measures, or exploring disease details, SwasthyaX is here to support your health journey.
+                                While our tool is built to provide accurate, evidence-based predictions, it's important to note that SwasthyaX is not a substitute for professional medical advice. Our recommendations and insights are designed to inform and support, but we always encourage consulting with a healthcare professional for a comprehensive diagnosis and treatment plan.
+                                At SwasthyaX, we believe in a future where individuals have the knowledge and tools to make informed decisions about their health. Our goal is to provide a service that is both reliable and easy to use, helping you feel more confident and proactive in managing your well-being.
+                                Your health is our priority, and we're here to make sure you have the information you need to take the best care of yourself. Welcome to SwasthyaX, your partner in health.
+                            </span>
+                        </p>
+                        <a href="/swasthyaX/about-us.html" id="read-more-text">Read More</a>
+                </div>
+            </div>
+        </section>
+                    
+        <section id="motivational-section">
+            <div class="motivational-text">
+                <p>"Healthy today, thriving tomorrow. Start your wellness journey with us."</p>
+            </div>
+        </section>
+
+        <section id="diagnosis">
+            <div class="container">
+                <div id="diagnosis-form" style="margin-top: 2px;">
+                <h2>Medical Diagnosis Form</h2>
+                <form id="diagnosis-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <h3>Symptoms:</h3>
+                    <div class="symptoms-grid" id="symptoms-grid"></div>
+                    <button type="submit">Get Diagnosis</button>
+                </form>
+                <div id="diagnosis-result" class="card" style="display: none; margin-top: 20px;">
+                    <h3>Diagnosis Result:</h3>
+                    <p id="result-text"></p>
+                </div>
+                <div id="additional-symptoms-section" style="display: none; margin-top: 20px;">
+                    <h3>Additional Symptoms Needed:</h3>
+                    <div class="symptoms-grid" id="additional-symptoms-grid"></div>
+                    <button id="get-final-diagnosis">Get Final Diagnosis</button>
+                </div>
+                <div id="final-diagnosis-result" class="card" style="display: none; margin-top: 20px;">
+                    <h4>Final Diagnosis:</h4>
+                    <p id="final-result-text"></p>
+                    <h4>Recommendations:</h4>
+                    <p id="recommendation-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="diseases">
+            <h2>Available Diseases</h2>
+            <div class="disease-wrapper">
+                <button id="scroll-left" class="scroll-btn">◀</button>
+                <div class="disease-scroll-container">
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/flu.jpg" alt="Flu">
+                        <div class="card-title">
+                            <h3>Flu</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>The flu is a contagious respiratory illness caused by influenza viruses. Symptoms include fever, chills, and fatigue.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/cold.jpg" alt="Cold">
+                        <div class="card-title">
+                            <h3>Cold</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>The common cold is a viral infection affecting the nose and throat, leading to sneezing, runny nose, and sore throat.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/allergy.jpg" alt="Allergy">
+                        <div class="card-title">
+                            <h3>Allergy</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Allergies occur when your immune system reacts to substances like pollen or food, causing sneezing or skin irritation.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/covid-19.png" alt="Covid-19">
+                        <div class="card-title">
+                            <h3>Covid-19</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Covid-19 is a respiratory illness caused by the coronavirus SARS-CoV-2. Symptoms may include fever, cough, and shortness of breath.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/gastroenteritis.jpg" alt="Gastroenteritis">
+                        <div class="card-title">
+                            <h3>Gastroenteritis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Gastroenteritis is inflammation of the stomach and intestines, leading to symptoms like diarrhea, vomiting, and stomach cramps.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/pneumonia.jpg" alt="Pneumonia">
+                        <div class="card-title">
+                            <h3>Pneumonia</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Pneumonia is an infection that inflames the air sacs in one or both lungs, leading to symptoms like cough, chest pain, and difficulty breathing.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/asthma.jpg" alt="Asthma">
+                        <div class="card-title">
+                            <h3>Asthma</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Asthma is a condition in which the airways become inflamed and narrow, causing difficulty breathing, coughing, and wheezing.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/tuberculosis.jpg" alt="Tuberculosis">
+                        <div class="card-title">
+                            <h3>Tuberculosis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Tuberculosis is a bacterial infection that primarily affects the lungs, causing symptoms like coughing, chest pain, and fatigue.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/liver-cirrhosis.jpg" alt="Liver Cirrhosis">
+                        <div class="card-title">
+                            <h3>Liver Cirrhosis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Liver cirrhosis is the scarring of the liver tissue, often caused by long-term liver damage due to alcohol or hepatitis.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/diabetes.png" alt="Diabetes">
+                        <div class="card-title">
+                            <h3>Diabetes</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Diabetes is a condition where the body is unable to properly process glucose, leading to high blood sugar levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/heart-disease.jpg" alt="Heart Disease">
+                        <div class="card-title">
+                            <h3>Heart Disease</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Heart disease refers to a range of conditions affecting the heart, including coronary artery disease, heart failure, and arrhythmias.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/anemia.jpg" alt="Anemia">
+                        <div class="card-title">
+                            <h3>Anemia</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Anemia is a condition where you lack enough healthy red blood cells to carry adequate oxygen to your body's tissues.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/hypertension.jpg" alt="Hypertension">
+                        <div class="card-title">
+                            <h3>Hypertension</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Hypertension, or high blood pressure, is a condition that can cause serious health problems like heart disease and stroke if left untreated.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/lung-cancer.jpg" alt="Lung Cancer">
+                        <div class="card-title">
+                            <h3>Lung Cancer</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Lung cancer begins in the lungs and is often caused by smoking. Symptoms include coughing, chest pain, and weight loss.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/celiac-disease.jpg" alt="Celiac Disease">
+                        <div class="card-title">
+                            <h3>Celiac Disease</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Celiac disease is an autoimmune condition triggered by consuming gluten, causing damage to the small intestine.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/chronic-bronchitis.jpg" alt="Chronic Bronchitis">
+                        <div class="card-title">
+                            <h3>Chronic Bronchitis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Chronic bronchitis is long-term inflammation of the airways, causing cough, mucus production, and breathing difficulty.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/sinusitis.jpg" alt="Sinusitis">
+                        <div class="card-title">
+                            <h3>Sinusitis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Sinusitis is the inflammation of the sinuses, causing congestion, headache, and facial pain or pressure.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/kidney-stones.jpg" alt="Kidney Stones">
+                        <div class="card-title">
+                            <h3>Kidney Stones</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Kidney stones are hard deposits of minerals that form in the kidneys, causing severe pain and urinary issues.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/urinary-tract-infection.jpg" alt="Urinary Tract Infection">
+                        <div class="card-title">
+                            <h3>Urinary Tract Infection</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>UTI is an infection in any part of the urinary system, causing a burning sensation while urinating and frequent urges to urinate.</p>
+                        </div>
+                    </div>
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/influenza.jpg" alt="Influenza">
+                        <div class="card-title">
+                            <h3>Influenza</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. Symptoms include fever, chills, cough, sore throat, and body aches.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/eczema.jpg" alt="Eczema">
+                        <div class="card-title">
+                            <h3>Eczema</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Eczema is a group of conditions that cause inflammation, redness, and itching of the skin. It can result from allergies, stress, or irritants in the environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/psoriasis.jpg" alt="Psoriasis">
+                        <div class="card-title">
+                            <h3>Psoriasis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Psoriasis is a chronic autoimmune condition that causes the rapid growth of skin cells, resulting in scaling, redness, and irritation, often on the elbows, knees, and scalp.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/gout.jpg" alt="Gout">
+                        <div class="card-title">
+                            <h3>Gout</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Gout is a form of arthritis caused by the accumulation of uric acid crystals in the joints, leading to sudden and severe pain, especially in the big toe.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/hepatitis.jpg" alt="Hepatitis">
+                        <div class="card-title">
+                            <h3>Hepatitis</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>Hepatitis refers to inflammation of the liver, which can be caused by viral infections (such as Hepatitis A, B, and C), alcohol use, or certain medications, leading to symptoms like jaundice and fatigue.</p>
+                        </div>
+                    </div>
+
+                    <div class="disease-card">
+                        <img src="/swasthyaX/assets/available-diseases/stroke.jpg" alt="Stroke">
+                        <div class="card-title">
+                            <h3>Stroke</h3>
+                        </div>
+                        <div class="overlay">
+                            <p>A stroke occurs when blood flow to part of the brain is blocked or reduced, resulting in brain cell death and causing symptoms like weakness, numbness, confusion, and difficulty speaking or seeing.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="scroll-right" class="scroll-btn">▶</button>
+            </div>
+        </section>
+        <section id="motivational-section">
+            <div class="motivational-text">
+                <p>"Your health journey matters. We're here to guide you, every step of the way."</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-wrapper">
+
+                    <div class="service-card">
+                        <img src="/swasthyaX/assets/our-services/disease-prediction.jpg" alt="Disease Prediction">
+                        <h3>Disease Prediction</h3>
+                        <p>We provide an advanced machine learning-based disease prediction service. By analyzing your symptoms, we can predict potential health conditions and suggest appropriate steps to take.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="/swasthyaX/assets/our-services/health-recommendations.jpg" alt="Health Recommendations">
+                        <h3>Health Recommendations</h3>
+                        <p>Get personalized health recommendations based on your symptoms and health data. Our platform offers expert-backed advice to guide you towards a healthier lifestyle.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="/swasthyaX/assets/our-services/symptom-checker.jpg" alt="Symptom Checker">
+                        <h3>Symptom Checker</h3>
+                        <p>Use our interactive symptom checker to get an initial understanding of your health. Enter your symptoms, and our system will analyze them to provide insights into potential causes.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="/swasthyaX/assets/our-services/health-monitoring.jpg" alt="Health Monitoring">
+                        <h3>Health Monitoring</h3>
+                        <p>Track your health over time with our monitoring tools. Stay updated with your health status and receive alerts if anything changes or if there are risks to your well-being.<br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <section id="contact">
+            <div class="container footer-container">
+                <div class="footer-column">
+                    <h4>Our Address</h4>
+                    <p><strong>Address:</strong> Greater Noida, Uttar Pradesh, India</p>
+                    <p><strong>Email:</strong> support@cureza.com</p>
+                    <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                    <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
+                    <br>
+                    <h4>Connect with Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <p><a href="/swasthyaX/about-us.html">About </a>  <a href="/swasthyaX/terms-of-service.html">Terms of Service</a>  <a href="/swasthyaX/privacy-policy.html">Privacy Policy</a></p>
+                    <p>&copy; 2024 SwasthyaX. All rights reserved.</p>
+            
+                </div>
+
+                <div class="footer-column footer-right" id="Contact-Us">
+                    <h4>Contact Us</h4>
+                    <form method="post" action="" name="contact-form">
+                        <input type="text" name="your-name" placeholder="Name" required>
+                        <input type="text" name="your-number" placeholder="Phone Number" required>
+                        <input type="email" name="your-email" placeholder="Email" required>
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <input type="submit" value="Submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="/swasthyaX/homepage.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+        import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDG0x6o9BAogmo_CA1JI19HnRQAS9TBG2A",
+            authDomain: "swasthyax.firebaseapp.com",
+            projectId: "swasthyax",
+            storageBucket: "swasthyax.firebasestorage.app",
+            messagingSenderId: "16642587520",
+            appId: "1:16642587520:web:744c5242c48ecd13ca9f65"
+        };
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getFirestore();
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const userId = user.uid;
+                const docRef = doc(db, "users", userId);
+                getDoc(docRef)
+                    .then((docSnap) => {
+                        if (docSnap.exists()) {
+                            const userData = docSnap.data();
+                            document.getElementById('loggedUserFName').innerText = userData.firstName || "First Name";
+                            document.getElementById('loggedUserLName').innerText = userData.lastName || "Last Name";
+                            document.getElementById('loggedUserEmail').innerText = userData.email || "Email";
+                            document.getElementById('userProfilePic').src = userData.profilePicture || 'default-profile.png';
+                        } else {
+                            console.error("No document found for user.");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching user data:", error);
+                    });
+            } else {
+                window.location.href = "index.html";
+            }
+        });
+
+        document.getElementById('logout').addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    window.location.href = "index.html"; 
+                })
+                .catch((error) => {
+                    console.error("Error during logout:", error);
+                });
+        });
+    </script>
+</body>
+</html>
