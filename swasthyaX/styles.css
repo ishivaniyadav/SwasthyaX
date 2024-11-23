@@ -25,13 +25,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 #logout {
     color: white;
     padding: 5px;
     border: none;
     cursor: pointer;
-    font-size: 16px;  
+    font-size: 16px;
     background: linear-gradient(to bottom right, #0bbdab, #009688);
     border-radius: 4px;
 }
@@ -42,6 +41,7 @@ header nav {
     align-items: center;
     padding: 20px;
     background-color: #4c54cc;
+    flex-wrap: wrap;
 }
 
 header nav .logo {
@@ -53,6 +53,8 @@ header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header nav ul li a {
@@ -60,9 +62,32 @@ header nav ul li a {
     text-decoration: none;
     font-size: 16px;
 }
-nav a:hover{
+
+nav a:hover {
     color: #09dfc9;
 }
+
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav .logo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    header nav ul li {
+        text-align: center;
+    }
+}
+
 main {
     padding-top: 10px;
 }
